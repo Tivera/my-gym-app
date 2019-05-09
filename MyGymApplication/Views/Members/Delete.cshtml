@@ -1,0 +1,120 @@
+﻿@model MyGymApplication.Models.GymModels.Member
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityQuestionAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityQuestionAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipPackage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipPackage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJoined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJoined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Points)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Points)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

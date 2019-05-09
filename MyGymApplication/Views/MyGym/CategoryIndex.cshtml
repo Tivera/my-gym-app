@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MyGymApplication.Models.GymModels.Category>
+
+@{
+    ViewBag.Title = "CategoryIndex";
+}
+
+<h2>Browse Categories</h2>
+
+<p>
+    <img src="@Url.Content("~/Content/MyGymResources/Classes2.PNG")" alt="Classes" style="width:1100px;height:250px;border:0;" />
+
+</p><br />
+
+<p><b> Select from @Model.Count() categories:</b></p>
+<ul>
+
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.CategoryName, "BrowseClasses", new { category = category.CategoryName })</li>
+    }
+</ul>
+<br /><br />
+@Html.ActionLink("Back to Menu", "MenuPage", "Gym") <br /><br />
+
+
+
+
+@*<h3>@Html.DisplayNameFor(model => model.CategoryName)</h3>
+<br/>
+@foreach (var item in Model)
+{
+<p>@Html.DisplayFor(modelItem => item.CategoryName)</p>
+}*@
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<table class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CategoryName }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CategoryName }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CategoryName })
+        </td>*@
+       @*</tr>
+}
+
+</table>*@

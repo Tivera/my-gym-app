@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "BMI";
+}
+
+<h2>Calculate My BMI</h2>
+
+@using (Html.BeginForm("BMIResultPV", "Gym", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary()
+
+    <div>
+        <p>Weight:</p>
+        @Html.TextBox("txtWeight") Kg<br /><br />
+    </div>
+    <div>
+        <p>Height:</p>
+        @Html.TextBox("txtHeight") m<br /><br />
+    </div>
+
+        @*<br /><input type="submit" value="CALCULATE" class="btn btn-default" /><br />*@
+        <input id="btnCalculate" type="submit" value="Calculate" onclick="location.href='@Url.Action("BMIResultPV","Gym")'" />
+        <br /><br />
+        <div class="cell">@{Html.RenderPartial("BMIResultPV");}</div>
+
+            }
+
+<br /><br />
+<div>
+    @Html.ActionLink("Back to Menu", "MenuPage", "Gym")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+

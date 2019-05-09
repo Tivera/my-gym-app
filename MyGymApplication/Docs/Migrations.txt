@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName MyGymContext -MigrationsDirectory Migrations\MyGym
+
+add-migration -ConfigurationTypeName  MyGymApplication.Migrations.MyGym.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName  MyGymApplication.Migrations.MyGym.Configuration

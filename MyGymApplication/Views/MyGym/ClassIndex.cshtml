@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MyGymApplication.Models.GymModels.ExerciseClass>
+
+@{
+    ViewBag.Title = "Class Index";
+}
+
+<h2>All Exercise Classes Offered</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseClassName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseClassDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseClassTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberEnrolled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaximumNumberAllowed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseClassName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseClassDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseClassTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberEnrolled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaximumNumberAllowed)
+        </td>
+       
+    </tr>
+}
+
+</table>
+
+<br /><br />
+@Html.ActionLink("Back to menu", "MenuPage", "Gym") <br /><br />

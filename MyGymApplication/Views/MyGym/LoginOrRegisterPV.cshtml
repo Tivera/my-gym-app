@@ -1,0 +1,35 @@
+﻿
+
+<ul class="links">
+    <li>
+        <p>Already a member ?</p>
+        <a href="@Url.Action("Login", "MyGym")" title="Login" class="links">
+            <img alt="Login" src="@Url.Content("~/Content/MyGymResources/2017-10-19-09-49-46-274028910.png")"
+                 style="width:85px;height:85px;border:0;"> Login
+        </a>
+    </li>
+
+    <li>
+        <p>Not a member?</p>
+        <a href="@Url.Action("Register", "MyGym")" title="Register" class="links">
+            <img alt="Register" src="@Url.Content("~/Content/MyGymResources/Register.png")"
+                 style="width:80px;height:80px;border:0;"> Register Here
+        </a>
+    </li>
+</ul>
+<style type="text/css">
+    ul.links {
+        list-style-type: none;
+    }
+
+        ul.links li {
+            border-left: 0;
+            padding-right: 2px;
+        }
+
+            ul.links li:first-child {
+                border-left: 0;
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+</style>

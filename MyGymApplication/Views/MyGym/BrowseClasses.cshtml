@@ -1,0 +1,18 @@
+﻿@model MyGymApplication.Models.GymModels.Category
+
+@{
+    ViewBag.Title = "BrowseClasses";
+}
+
+<h2>Browse Category: @Model.CategoryName</h2>
+
+<ul>
+    @foreach (var ExerciseClass in Model.ExerciseClasses)
+    {
+        <li>
+            @Html.ActionLink(ExerciseClass.ExerciseClassName, "ClassDetails", new { id = ExerciseClass.ExerciseClassID })
+        </li>
+    }
+</ul>
+<br /><br />
+@Html.ActionLink("Back to menu", "MenuPage", "Gym") <br /><br />

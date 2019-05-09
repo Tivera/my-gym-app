@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "CreateTrainingProgram";
+}
+
+<h2>Create Training Program</h2>
+
+@using (Html.BeginForm("GenerateInputTablePV", "MyGym", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary()
+
+    <div>
+        <p>Number Of Columns:&nbsp;&nbsp; @Html.TextBox("txtColumns") </p><br /><br />
+    </div>
+    <div>
+        <p>Number Of Rows:&nbsp;&nbsp; @Html.TextBox("txtRows")</p><br /><br />
+    </div>
+
+
+    <input id="btnGenerate" type="submit" value="Generate" onclick="location.href='@Url.Action("GenerateInputTablePV","MyGym")'" />
+    <br /><br />
+    <div class="cell">@{Html.RenderPartial("GenerateInputTablePV");}</div>
+
+        }
+
+<br /><br />
+<div>
+    @Html.ActionLink("Back to Menu", "MenuPage", "MyGym")
+</div>

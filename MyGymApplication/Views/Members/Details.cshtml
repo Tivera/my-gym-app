@@ -1,0 +1,114 @@
+﻿@model MyGymApplication.Models.GymModels.Member
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityQuestionAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityQuestionAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipPackage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipPackage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJoined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJoined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Points)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Points)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,23 @@
+﻿@using MyGymApplication.Data
+
+@{
+    ViewBag.Title = "MyWeightChart";
+}
+
+<h2>My Weight Chart</h2>
+
+
+
+
+@{ 
+    MyGymContext myGymDB = new MyGymContext();
+
+
+    var data = from trackweighttable in myGymDB.TrackMyWeights select new { trackweighttable.week, trackweighttable.weight } ;
+
+    var myChart = new Chart(width: 600, height: 400, theme: ChartTheme.Blue)
+                 .SetXAxis("Week", 1)
+                 .SetYAxis("Weight")
+                 .AddTitle("My Weight Chart")
+                 .AddSeries("Default", chartType: "Line",  xValue: data,  xField: "Week", yValues: data, yFields: "Weight")
+                 .Write();}

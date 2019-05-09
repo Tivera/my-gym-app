@@ -1,0 +1,62 @@
+﻿
+
+@{
+    ViewBag.Title = "MainPage";
+
+}
+@*<br/>
+    <body style="background-color:darkslategray; background-image:url('../ClassBookingResources/images-6 (12).jpeg')">*@
+<h2>What We Offer</h2>
+<style>
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: url('../Content/MyGymResources/2017-10-18-17-42-28-274028910.jpeg');
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #FFFFFF;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+</style>
+<style media="screen" type="text/css">
+    div.table {
+        display: table;
+    }
+
+    div.row {
+        display: table-row;
+    }
+
+    div.cell {
+        display: table-cell;
+    }
+</style>
+<div class="table">
+    <div class="row">
+        <div class="cell">
+            <p>
+                <img src="@Url.Content("~/Content/MyGymResources/GYM SPACE.jpeg")" alt="IMAGE1" />
+                <br />
+            <p>An ideal gym space with a range of only the best equipment for your utilization.</p><br />
+            <img src="@Url.Content("~/Content/MyGymResources/GROUP FITNESS.jpeg")" alt="IMAGE2" />
+            <br />
+            <p>Join one of our group classes if you love interacting, or get a more personalised</p>
+            <p>workout with one of our trainers. Our online feature lets you book a class</p>
+            <p>and contact trainers on-the-go.</p><br />
+            <img src="@Url.Content("~/Content/MyGymResources/ONLINE Store.jpeg")" alt="IMAGE3" />
+            <br />
+            @*<p>New! We now have our very own online store!</p>
+            <p>Accessible to members only, you can shop for your supplements</p>
+            <p> gym accessories from the comfort of your home and have them delievered to your doorstep.</p><br />
+            <img src="@Url.Content("~/Content/MyGymResources/2017-10-18-18-51-22-274028910.jpeg")" alt="IMAGE4" />*@
+            <br />
+            <p>Members get rewarded with points, for simply being a member and making use of our online feature!</p>
+            <p>Speak to one of our friendly staff members for more information about how your points</p>
+            <p>contribute to your membership.</p>
+            <br />
+
+            </p>
+        </div> <div class="cell">@{Html.RenderPartial("LoginOrRegisterPV");}</div>
+    </div>
+</div>

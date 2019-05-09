@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "MyClasses";
+}
+
+<h2>MyClasses</h2>
+<br/>
+
+
+    @foreach (var item in ViewBag.MyClassesList)
+    {
+        <li>@item</li>
+      
+                
+
+    }
+
+@*var MyClassesList = @Html.Raw(Json.Encode(this.ViewBag.MyClassesList));*@
+@*for(var i = 0; i < MyClassesList.length; i++)
+{
+var row = MyClassesList[i];
+
+}*@
+    

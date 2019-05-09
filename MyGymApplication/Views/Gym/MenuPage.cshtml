@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "MenuPage";
+}
+
+<h2>MenuPage</h2>
+
+@if (Session["memberNumber"] != null)
+{
+    <h4>Welcome to GymJunkies @Session["memberName"].ToString()! </h4>
+}
+<br /><br />
+
+<ul class="links">
+    <li>
+        <a href="@Url.Action("ClassIndex", "MyGym")" title="View All Classes" class="links">
+            <img alt="View Classes" src="@Url.Content("~/Content/MyGymResources/gym-md.png")"
+                 style="width:100px;height:100px;border:0;"> View All Classes
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("CategoryIndex", "MyGym")" title="Book A Class" class="links">
+            <img alt="Book Class" src="@Url.Content("~/Content/MyGymResources/2017-10-16-12-23-24--417073941.jpeg")"
+                 style="width:100px;height:100px;border:0;"> Book A Class
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("ViewMyBookings", "MyGym")" title="View My Bookings" class="links">
+            <img alt="View Bookings" src="@Url.Content("~/Content/MyGymResources/document-icon.png")"
+                 style="width:100px;height:100px;border:0;"> View My Bookings
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("MyClasses", "MyGym")" title="View My Classes" class="links">
+            <img alt="View Classes" src="@Url.Content("~/Content/MyGymResources/document-icon.png")"
+                 style="width:100px;height:100px;border:0;"> View My Classes
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("BMI2", "MyGym")" title="Calculate My BMI" class="links">
+            <img alt="Calculate BMI" src="@Url.Content("~/Content/MyGymResources/bmi.png")"
+                 style="width:100px;height:100px;border:0;"> Calculate My BMI
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("TrackMyWeight", "MyGym")" title="Track My Weight" class="links">
+            <img alt="Track My Weight" src="@Url.Content("~/Content/MyGymResources/images-10.png")"
+                 style="width:100px;height:100px;border:0;"> Track My Weight
+        </a>
+    </li>
+
+    <li>
+        <a href="@Url.Action("CreateTrainingProgram", "MyGym")" title="Create My Training Program" class="links">
+            <img alt="Create My Training Program" src="@Url.Content("~/Content/MyGymResources/images-10.png")"
+                 style="width:100px;height:100px;border:0;"> Create My Training Program
+        </a>
+    </li>
+
+
+    <li>
+        <a href="@Url.Action("Details", "MyGym")" title="View My Details" class="links">
+            <img alt="View Details" src="@Url.Content("~/Content/MyGymResources/downloadfile-4.png")"
+                 style="width:100px;height:100px;border:0;"> View My Details
+        </a>
+    </li>
+
+    @*<li>
+            <a href="@Url.Action("ProductCategoryIndex", "Store")" title="Online Store" class="links">
+                <img alt="Online Store" src="@Url.Content("~/Content/ClassBookingResources/downloadfile-3.png")"
+                     style="width:100px;height:100px;border:0;"> Online Store
+            </a>
+        </li>
+
+        <li>
+            <a href="@Url.Action("ViewMyOrders", "Store")" title="View My Orders" class="links">
+                <img alt="View orders" src="@Url.Content("~/Content/ClassBookingResources/downloadfile-2.png")"
+                     style="width:100px;height:100px;border:0;"> View My Orders
+            </a>
+        </li>*@
+
+    <li>
+        <a href="@Url.Action("SendEmail", "Contact")" title="Contact A Trainer" class="links">
+            <img alt="Contact Trainer" src="@Url.Content("~/Content/MyGymResources/downloadfile-5.png")"
+                 style="width:100px;height:100px;border:0;"> Contact A Trainer
+        </a>
+    </li>
+
+</ul>
+<style type="text/css">
+    ul.links {
+        list-style-type: none;
+    }
+
+        ul.links li {
+            display: inline-block;
+            padding-left: 10px;
+            margin-left: 10px;
+            padding-bottom: 10px;
+        }
+
+            ul.links li:first-child {
+                border-left: 0;
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+</style>
+<br />
+<br />
+<ul class="links">
+    <li>
+        <a href="@Url.Action("Logout", "MyGym")" title="Logout" class="links">
+            <img alt="Logout" src="@Url.Content("~/Content/MyGymResources/downloadfile123.png")"
+                 style="width:50px;height:50px;border:0;"> Logout
+        </a>
+    </li>
+</ul>
+<style>
+    ul.links {
+        list-style-type: none;
+    }
+
+        ul.links li {
+            border-left: 0;
+            padding-right: 30px;
+            margin-left: 0px;
+        }
+</style>
+
+
+

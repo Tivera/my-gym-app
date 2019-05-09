@@ -1,0 +1,90 @@
+﻿@model MyGymApplication.Models.GymModels.ExerciseClass
+
+@{
+    ViewBag.Title = "Class - " + Model.ExerciseClassName;
+}
+
+<h2>@Model.ExerciseClassName</h2>
+
+<div>
+    <h4>Exercise Class</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExerciseClassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExerciseClassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrainerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExerciseClassDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExerciseClassDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExerciseClassTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExerciseClassTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberEnrolled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberEnrolled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaximumNumberAllowed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaximumNumberAllowed)
+        </dd>
+
+    </dl>
+</div>
+
+<ul class="links">
+    <li>
+        <a href="@Url.Action("makeBooking", "Gym", new { id = Model.ExerciseClassID }, "")" title="Make Booking" class="links">
+            <img alt="Make Booking" src="@Url.Content("~/Content/MyGymResources/depositphotos_81415668-stock-illustration-checklist-flat-cyan-and-blue.jpg")"
+                 style="width:50px;height:50px;border:0;"> Make A Booking
+        </a>
+    </li>
+</ul>
+<style type="text/css">
+    ul.links {
+        list-style-type: none;
+    }
+</style>
+
+
+<br /><br />
+@Html.ActionLink("Back to menu", "MenuPage", "Gym") <br /><br />
+
+

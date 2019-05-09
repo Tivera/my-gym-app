@@ -1,0 +1,143 @@
+﻿@model MyGymApplication.Models.GymModels.Member
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Register</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+         <div class="form-group">
+            @Html.LabelFor(model => model.IdentityNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdentityNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdentityNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MemberName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MemberName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MemberName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MemberSurname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MemberSurname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MemberSurname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ContactNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ContactNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ContactNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SecurityQuestion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.SecurityQuestion,
+               new[]
+               {
+                   new SelectListItem {Text="What is your favourite food?", Value = "What is your favourite food?" },
+                   new SelectListItem {Text="What was your first pets name?", Value = "What was your first pets name?" },
+                   new SelectListItem {Text="What is the name of favourite movie?", Value = "What is the name of favourite movie?" },
+                   new SelectListItem {Text="What was the make and model of your first car?", Value = "What was the make and model of your first car?" },
+                   new SelectListItem {Text="What is the name of your favourite soccer team?", Value = "What is the name of your favourite soccer team?" },
+               }, "---Choose a security question---"
+               , new { htmlAttributes = new { @class = "form-control" } })
+                
+                @Html.ValidationMessageFor(model => model.SecurityQuestion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SecurityQuestionAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SecurityQuestionAnswer, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SecurityQuestionAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PackageName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.PackageName,
+               new[]
+               {
+                   new SelectListItem {Text="Bronze Quarterly - R250p/m", Value = "Bronze Quarterly - R250p/m" },
+                   new SelectListItem {Text="Bronze Half Yearly - R225p/m", Value = "Bronze Half Yearly - R225p/m" },
+                   new SelectListItem {Text="Bronze Yearly - R200p/m", Value = "Bronze Yearly - R200p/m" },
+                   new SelectListItem {Text="Silver Quarterly - R350p/m", Value = "Silver Quarterly - R350p/m"},
+                   new SelectListItem {Text="Silver Half Yearly - R325p/m", Value = "Silver Half Yearly - R325p/m" },
+                   new SelectListItem {Text="Silver Yearly - R300p/m", Value = "Silver Yearly - R300p/m" },
+                   new SelectListItem {Text="Gold Quarterly - R450p/m", Value = "Gold Quarterly - R450p/m" },
+                   new SelectListItem {Text="Gold Half Yearly - R425p/m", Value = "Gold Half Yearly - R425p/m" },
+                   new SelectListItem {Text="Gold Yearly - R400p/m", Value = "Gold Yearly - R400p/m" },
+                   new SelectListItem {Text="Platinum Quartetly - R550p/m", Value = "Platinum Quartetly - R550p/m" },
+                   new SelectListItem {Text="Platinum Half Yearly - R525p/m", Value = "Platinum Half Yearly - R525p/m" },
+                   new SelectListItem {Text="Platinum Yearly - R500p/m", Value = "Platinum Yearly - R500p/m" },
+               }, "---Choose a membership package option---"
+               , new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PackageName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+      
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-default" />
+                
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back", "MainPage")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

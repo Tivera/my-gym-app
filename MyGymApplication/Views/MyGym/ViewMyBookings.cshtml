@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MyGymApplication.Models.GymModels.Booking>
+
+@{
+    ViewBag.Title = "View My Bookings";
+}
+
+<h2>View My Bookings</h2>
+
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseClassName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseClassName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingTime)
+        </td>
+        <td>
+          
+            @Html.ActionLink("Delete Booking", "DeleteBooking", new { id=item.BookingID })
+        </td>
+    </tr>
+}
+
+</table>
